@@ -174,6 +174,7 @@ main {
     body{
         display: grid;
         background-image: none;
+        overflow: visible;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 95px) 50px 1fr 294px;
         grid-template-areas: "logo logo logo"
@@ -181,8 +182,10 @@ main {
                              "opcion opcion opcion"
                              "pre pre pre"
                              "info info info";
+                             
     }
     .div__menu{
+        margin-top: 50px;
         grid-area: menu;
     }
 
@@ -194,14 +197,128 @@ main {
     }
     .div__menu ul > li{
         flex: 1;
-    }
+    }   
 
     .div__menu ul li a{
         text-align: center;
         display: block;
         width: 150px;
         border-radius: 10px;
-        border: 1px solid var(--color-1);
+        border: 5px solid var(--color-1);
+        outline: 2px solid white;
         padding: 5px;
+        background-color: var(--color-4);
+    }
+
+    .div__product {
+        padding-top: 0;
+        grid-area: pre;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: violet;
+        width: 100%;
+        
+    }
+    
+    .logo {
+        position: absolute;
+        left: 37%;
+        top: -70px;
+        right: 0;
+        margin: auto;
+        width: 100%;
+    }
+
+    .div__ice-cream{
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-width: 100vh;
+    }
+
+    .div__ice-cream img:nth-child(1),
+    .div__ice-cream img:nth-child(2),
+    .div__ice-cream img:nth-child(3){
+        transform: rotate(0deg);
+        position: absolute;
+        overflow: hidden;
+        height: 500px;
+        object-fit: contain;
+        inset: 0;
+        margin: 30px auto;
+        z-index: -10;
+    }
+   
+    .div__ice-cream img:nth-child(1) {
+        transform: rotate(19deg);
+        width: 514px;
+        height: 500px;
+        z-index: 5;
+        left: -142px;
+        top: -186px;
+    }
+    
+    .div__ice-cream img:nth-child(2) {
+        transform: rotate(19deg);
+        width: 514px;
+        height: 500px;
+        z-index: 10;
+        left: 0px;
+        top: -190px;
+    }
+    
+    .div__ice-cream img:nth-child(3) {
+        transform: rotate(19deg);
+        width: 514px;
+        height: 500px;
+        z-index: 5;
+        left: 142px;
+        top: -186px;
+    }
+
+    .div__info{
+        grid-area: info;
+        margin-top: 700px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 750px;
+        margin: 5%;
+    }
+
+    .div__info h1,
+    .div__info span,
+    .div__info p{
+        color: var(--color-2);
+    }
+
+    .div__info h1{
+        font-size: 50px;
+        font-family: "Inter_28pt-Bold";
+    }
+
+    .div__info span{
+        font-size: 32px;
+        font-family: "Lalezar-Regular";
+
+    }
+
+    .div__info p{
+        font-size: 24px;
+        font-family: "Inder-Regular";
+    }
+
+    .div__info a{
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .bottom__button {
+        align-self: center;
+        margin-top: 25px;
+        padding-left: 25%;
     }
 }
