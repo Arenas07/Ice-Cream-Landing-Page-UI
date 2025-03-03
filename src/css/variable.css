@@ -1,0 +1,23 @@
+:root{
+    --color-1: #3C1404;
+}
+
+@font-face {
+    font-family: "Inter_28pt-SemiBold";
+    src: url(../storage/font/Inter/static/Inter_28pt-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Inter_28pt-Bold";
+    src: url(../storage/font/Inter/static/Inter_28pt-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Lalezar-Regular";
+    src: url(../storage/font/Lalezar/Lalezar-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inder-Regular";
+    src: url(../storage/font/Inder/Inder-Regular.ttf);
+}
